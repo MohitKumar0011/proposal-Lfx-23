@@ -17,12 +17,7 @@ deprecation warnings during the build. But incremental progress towards that goa
 
 
 ## Introduction
-I am a student at Maharaja Agrasen Institute of Technology, pursuing a major in Computer Science. I am a web development 
-enthusiast have proficiency in Javascript and React. I have made couple of projects in React and APIs. I came to know about 
-this mentorship via Twitter.
-I am interested in this program as it alligns to my skillset and will give me an opportunity to upskill myself, learn from my mentors and the community, tackle new challlenges, expposure to real world projects.
-I have the necessary skills like good understnading of Javascript , react etc. which will be helpful in my journey.
-I am looking forward to an experience full of learning and collaboration.
+I am a student at Maharaja Agrasen Institute of Technology, pursuing a major in Computer Science. I am a web development enthusiast with proficiency in JavaScript and React. I have made a couple of projects in React and APIs. I came to know about this mentorship via Twitter. I am interested in this program as it aligns with my skill set and will give me an opportunity to upskill myself, learn from my mentors and the community, tackle new challenges, gain exposure to real-world projects. I have the necessary skills like a good understanding of JavaScript, React, etc., which will be helpful on my journey. I am looking forward to an experience full of learning and collaboration.
 ## Proposed Solution 
 We need to update Jaeger UI to the latest version of React that is React 18. 
 ReactDOM.render is not available in React 18 so we need to change it to latest version of react , i.e.
