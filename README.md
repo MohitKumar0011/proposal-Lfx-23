@@ -73,21 +73,37 @@ react-virtualized-select: 3.1.2
 react-vis: 1.7.4
 react-vis-force: 0.3.2
 ```
-We need to perform similar updates to the dependencies of other folders in Jaeger UI wherever required.
-As we know that there are some deprecation from React 16 to React 18 so we need to update that also like:-
-Enzyme is no more available in react 18
-render function: The render function has been deprecated in favor of the createRoot function.
-renderCallbacks: The renderCallbacks prop has been deprecated. Instead, you can use the useEffect hook to perform side 
-effects after a component renders.
-static getDerivedStateFromProps: The static getDerivedStateFromProps method has been deprecated. Instead, you can use the 
-useEffect hook to update the state of your components based on props changes.
-A lot of files in the project have render function so we will change it to createRoot for example in page.test.js uses render function so we have to change it.
-There are modern features like promises which needs to be included wherever required.
-In typescript also there are several code changed like :-
-1. children prop now needs to be listed explicitly when defining props
-2. Remove {} from ReactFragment
-3. this.context becomes unknown
-4. Remove deprecated types to align with official React ones
-etc.
-There are some files which uses these deprecated function , so we have to change them as well.
-Hence in this project we will be updating the dependencies to react 18 version and also update the deprecated code snippets and function to the latest version.
+We need to perform similar updates to the dependencies of other folders in Jaeger UI wherever required. As we know that there are some deprecations from React 16 to React 18, so we need to update those as well, for example:
+
+*Enzyme is no longer available in React 18.
+*The render function has been deprecated in favor of the createRoot function.
+The renderCallbacks prop has been deprecated. Instead, you can use the useEffect hook to perform side effects after a component renders.
+The static getDerivedStateFromProps method has been deprecated. Instead, you can use the useEffect hook to update the state of your components based on prop changes.
+A lot of files in the project have the render function, so we will change it to createRoot. For example, page.test.js uses the render function, so we have to change it. There are modern features like promises that need to be included wherever required. In TypeScript, there are several code changes like:
+The children prop now needs to be listed explicitly when defining props.
+Remove {} from ReactFragment.
+this.context becomes unknown.
+Remove deprecated types to align with official React ones, etc.
+There are some files which use these deprecated functions, so we have to change them as well. Hence, in this project, we will be updating the dependencies to React 18 version and also updating the deprecated code snippets and functions to the latest version.
+## Deprecations and Updates
+
+We need to perform similar updates to the dependencies of other folders in Jaeger UI wherever required. As we know that there are some deprecations from React 16 to React 18, so we need to update those as well, for example:
+
+1. **Enzyme Deprecation**: Enzyme is no longer available in React 18. It needs to be replaced with suitable alternatives.
+
+2. **Render Function Deprecation**: The `render` function has been deprecated in favor of the `createRoot` function.
+
+3. **RenderCallbacks Deprecation**: The `renderCallbacks` prop is deprecated. Instead, you should use the `useEffect` hook to perform side effects after a component renders.
+
+4. **getDerivedStateFromProps Deprecation**: The `static getDerivedStateFromProps` method has been deprecated. The `useEffect` hook should be used to update component state based on prop changes.
+
+5. **Modern Features**: Modern features like promises should be incorporated wherever required.
+
+6. **TypeScript Updates**: In TypeScript, several code changes are necessary to align with React 18:
+   - The `children` prop must be explicitly listed when defining props.
+   - Remove `{}` from `ReactFragment`.
+   - `this.context` becomes `unknown`.
+   - Remove deprecated types to align with official React types.
+
+Many files in the project currently use the deprecated render function. These should be updated to use createRoot. For example, `page.test.js` currently uses the render function and needs to be changed.
+This project aims to update Jaeger UI's dependencies to React 18 and address these deprecations by updating code snippets and functions to the latest versions. The goal is to ensure that Jaeger UI is compatible with React 18 while maintaining code quality and stability.
