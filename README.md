@@ -73,19 +73,6 @@ react-virtualized-select: 3.1.2
 react-vis: 1.7.4
 react-vis-force: 0.3.2
 ```
-We need to perform similar updates to the dependencies of other folders in Jaeger UI wherever required. As we know that there are some deprecations from React 16 to React 18, so we need to update those as well, for example:
-
-*Enzyme is no longer available in React 18.
-*The render function has been deprecated in favor of the createRoot function.
-The renderCallbacks prop has been deprecated. Instead, you can use the useEffect hook to perform side effects after a component renders.
-The static getDerivedStateFromProps method has been deprecated. Instead, you can use the useEffect hook to update the state of your components based on prop changes.
-A lot of files in the project have the render function, so we will change it to createRoot. For example, page.test.js uses the render function, so we have to change it. There are modern features like promises that need to be included wherever required. In TypeScript, there are several code changes like:
-The children prop now needs to be listed explicitly when defining props.
-Remove {} from ReactFragment.
-this.context becomes unknown.
-Remove deprecated types to align with official React ones, etc.
-There are some files which use these deprecated functions, so we have to change them as well. Hence, in this project, we will be updating the dependencies to React 18 version and also updating the deprecated code snippets and functions to the latest version.
-## Deprecations and Updates
 
 We need to perform similar updates to the dependencies of other folders in Jaeger UI wherever required. As we know that there are some deprecations from React 16 to React 18, so we need to update those as well, for example:
 
